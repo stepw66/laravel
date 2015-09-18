@@ -35,4 +35,10 @@ return [
         'secret' => '',
     ],
 
+    'twitter' => [
+        'api_key'    => 'QwreYnWZZ1jCMHRjswsf8q33G',
+        'api_secret' => 'rIHJGLDcNfexp9rJs4dwwuHK97cx8MbphrB5wl4O3icGyS3uDA',
+        'redirect_url'  => 'http://www.laravel.local/oauth'
+    ],
+
 ];

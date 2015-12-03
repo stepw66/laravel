@@ -27,3 +27,13 @@ Route::get('oauth', [
     'as'        => 'oauth.index',
     'uses'      => 'OauthController@getIndex'
 ]);
+
+Route::get('todo', [
+    'as'        => 'todo',
+    'uses'      => 'TodoController@getIndex'
+]);
+
+Route::get('products', [
+    'as'        => 'products',
+    'uses'      => 'ProductController@getIndex'
+]);

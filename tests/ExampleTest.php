@@ -16,4 +16,11 @@ class ExampleTest extends TestCase
         $this->visit('/')
              ->see('Laravel 5');
     }
+
+    public function testBasicFail()
+    {
+        $this->visit('/')
+            ->see('Laravel 3');
+    }
+
 }

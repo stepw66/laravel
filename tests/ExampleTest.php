@@ -20,7 +20,7 @@ class ExampleTest extends TestCase
     public function testBasicFail()
     {
         $this->visit('/')
-            ->see('Laravel 1');
+            ->see('Laravel 2');
     }
 
 }

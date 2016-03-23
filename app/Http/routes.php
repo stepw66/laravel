@@ -37,3 +37,23 @@ Route::get('products', [
     'as'        => 'products',
     'uses'      => 'ProductController@getIndex'
 ]);
+
+Route::get('hello', [
+    'as'        => 'hello',
+    'uses'      => 'HelloController@getIndex'
+]);
+
+Route::group([
+        'as'        => 'post.',
+        'prefix'    => 'post'
+    ], function(){
+        Route::get('/', [
+            'as'        => 'index.get',
+            'uses'      => 'PostController@getIndex'
+        ]);
+
+        Route::post('/', [
+            'as'        => 'index.post',
+            'uses'      => 'PostController@postIndex'
+        ]);
+});

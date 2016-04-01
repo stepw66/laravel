@@ -57,3 +57,28 @@ Route::group([
             'uses'      => 'PostController@postIndex'
         ]);
 });
+
+Route::get('pusher', [
+    'as'    => 'pusher.index.get',
+    'uses'  => 'PusherController@getIndex'
+]);
+
+Route::post('pusher', [
+    'as'    => 'pusher.index.post',
+    'uses'  => 'PusherController@postIndex'
+]);
+
+Route::get('pusher/notification', [
+    'as'    => 'pusher.notification.get',
+    'uses'  => 'PusherController@getNotification'
+]);
+
+get('/bridge', function() {
+    $pusher = App::make('pusher');
+
+    $pusher->trigger( 'test-channel',
+        'test-event',
+        array('text' => 'Preparing the Pusher Laracon.eu workshop!'));
+
+    return view('welcome');
+});

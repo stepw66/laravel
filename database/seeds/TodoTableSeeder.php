@@ -1,9 +1,9 @@
 <?php
 
-use App\Post;
+use App\Todo;
 use Illuminate\Database\Seeder;
 
-class PostTableSeeder extends Seeder
+class TodoTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,6 @@ class PostTableSeeder extends Seeder
      */
     public function run()
     {
-        Post::truncate();
-        factory(Post::class, 2)->create();
+        factory(Todo::class, 3)->create();
     }
 }

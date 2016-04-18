@@ -17,4 +17,9 @@ class Post extends Model implements SluggableInterface
         'save_to'       => 'slug'
     ];
 
+    public function user()
+    {
+        $this->belongsTo('App\User');
+    }
+
 }

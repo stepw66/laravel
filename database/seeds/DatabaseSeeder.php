@@ -14,11 +14,11 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        App\Post::truncate();
         App\User::truncate();
+        App\Post::truncate();
+        App\Phone::truncate();
 
         $this->call(UserTableSeeder::class);
-        $this->call(TodoTableSeeder::class);
 
         Model::reguard();
     }

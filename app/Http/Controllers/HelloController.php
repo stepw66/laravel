@@ -16,7 +16,8 @@ class HelloController extends Controller
      */
     public function getIndex()
     {
-        return view('hello.index');
+        $users = \App\User::all()->phone();
+        var_dump($users);
     }
 
     /**

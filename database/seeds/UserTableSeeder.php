@@ -18,6 +18,11 @@ class UserTableSeeder extends Seeder
                     'user_id'       => $user->id,
                 ]));
             }
+
+            $user->phone()->save(factory(App\Phone::class)->make([
+                'user_id'       => $user->id,
+            ]));
+
         });
     }
 }
